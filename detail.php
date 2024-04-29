@@ -1,0 +1,462 @@
+<section class="content">
+
+      <div class="row">
+        <div class="col-md-3">
+
+          <!-- Profile Image -->
+          <div class="box box-primary">
+            <div class="box-body box-profile">
+              <img class="profile-user-img img-responsive img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
+
+              <h3 class="profile-username text-center"><?php echo $ssw ['nm_siswa']?></h3>
+
+              <p class="text-muted text-center"><?php echo $ssw ['kmptnsi_keahlian']?></p>
+
+			  <input type="file" name="photo" class="from-control" placeholder="Update Photo">
+              <a type="file" name="photo" href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col -->
+        <div class="col-md-9">
+				<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal-info">
+					<i class="fa fa-plus"> Update</i>
+				</button>
+		  		<a href="<?php echo base_url('admin/Siswa')?>" class="btn btn-sm btn-warning"> Kembali</a>
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#data_siswa" data-toggle="tab" aria-expanded="true">Data Siswa</a></li>
+              <li class=""><a href="#data_ortu" data-toggle="tab" aria-expanded="false">Data Orang Tua</a></li>
+              <li class=""><a href="#persyaratan" data-toggle="tab" aria-expanded="false">Persyaratan</a></li>
+            </ul>
+            <div class="tab-content">
+              <<div class="tab-pane" id="data_siswa">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">Nama Lengkap</label>
+                    <div class="col-sm-10">
+                      <?php echo $ssw['nm_siswa']?> 
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jurusan</label>
+                    <div class="col-sm-10"> <?php echo $ssw['kmptnsi_keahlian']?>                     
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">NIS</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['nis']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">NISN</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['nisn']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Diterima saat kelas</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['kls']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Jenis Kelamin</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['jnis_klamin']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Tempat dan tanggal Lahir</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['tmp_lahir']?>, <?php echo $ssw['tgl_lahir']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Alamat</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['alamat']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Hobi</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['hobi']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Cita-cita</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['cita_cita']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Asal Sekolah</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['asl_sekolah']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Agama</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['agama']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Anak Ke-</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['anak_ke']?>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputJurusan" class="col-sm-2 control-label">Penerima KIP/DTKS</label>
+                    <div class="col-sm-10">
+                    <?php echo $ssw['penerima_kip_dtks']?>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="data_ortu">
+                <!-- The timeline -->
+                <ul class="timeline timeline-inverse">
+                  <!-- timeline time label -->
+                  <li class="time-label">
+                        <span class="bg-red">
+                          Ayah
+                        </span>
+                  </li>
+                  
+                  <!-- END timeline item -->
+                  <!-- timeline item -->
+                  <li>
+                    <i class="fa fa-user bg-aqua"></i>
+
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Nama Ayah : </a> <?php $nm_ayah = $this->db->get('tb02_ortu')->result();
+                      foreach($nm_ayah as $row)?> <?php echo $row->nm_ayah; ?>
+                      </h3>
+                    </div>
+
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Tempat dan Tanggal Lahir : </a> <?php $tmp_lahir_ayah = $this->db->get('tb02_ortu')->result();
+                      foreach($tmp_lahir_ayah as $row)?> <?php echo $row->tmp_lahir_ayah; ?>, <?php $tgl_lahir_ayah = $this->db->get('tb02_ortu')->result();
+                      foreach($tgl_lahir_ayah as $row)?> <?php echo $row->tgl_lahir_ayah; ?>
+                      </h3>
+                    </div>
+
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Pendidikan Terakhir Ayah : </a> <?php $pnddkan_trkhir_ayah = $this->db->get('tb02_ortu')->result();
+                      foreach($pnddkan_trkhir_ayah as $row)?> <?php echo $row->pnddkan_trkhir_ayah; ?>
+                      </h3>
+                    </div>
+                    
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Pekerjaan : </a> <?php $pkrjaan_ayah = $this->db->get('tb02_ortu')->result();
+                      foreach($pkrjaan_ayah as $row)?> <?php echo $row->pkrjaan_ayah; ?>
+                      </h3>
+                    </div>
+                    
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Penghasilan Bulanan  : </a> <?php $pnghsilan_bulanan_ayah = $this->db->get('tb02_ortu')->result();
+                      foreach($pnghsilan_bulanan_ayah as $row)?> <?php echo $row->pnghsilan_bulanan_ayah; ?>
+                      </h3>
+                    </div>
+                  
+                  </li>
+                  <!-- END timeline item -->
+                  <!-- timeline time label -->
+                  <li class="time-label">
+                        <span class="bg-green">
+                          Ibu
+                        </span>
+                  </li>
+                  <!-- /.timeline-label -->
+                  <!-- timeline item -->
+                  <li>
+                  <i class="fa fa-user bg-purple"></i>
+
+                  <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Nama Ibu : </a> <?php $nm_ibu = $this->db->get('tb02_ortu')->result();
+                      foreach($nm_ibu as $row)?> <?php echo $row->nm_ibu; ?>
+                      </h3>
+                    </div>
+
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Tempat dan Tanggal Lahir : </a> <?php $tmp_lahir_ibu = $this->db->get('tb02_ortu')->result();
+                      foreach($tmp_lahir_ibu as $row)?> <?php echo $row->tmp_lahir_ibu; ?>, <?php $tgl_lahir_ibu = $this->db->get('tb02_ortu')->result();
+                      foreach($tgl_lahir_ibu as $row)?> <?php echo $row->tgl_lahir_ibu; ?>
+                      </h3>
+                    </div>
+
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Pendidikan Terakhir Ibu : </a> <?php $pnddkan_trkhir_ibu = $this->db->get('tb02_ortu')->result();
+                      foreach($pnddkan_trkhir_ibu as $row)?> <?php echo $row->pnddkan_trkhir_ibu; ?>
+                      </h3>
+                    </div>
+                    
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Pekerjaan : </a> <?php $pkrjaan_ibu = $this->db->get('tb02_ortu')->result();
+                      foreach($pkrjaan_ibu as $row)?> <?php echo $row->pkrjaan_ibu; ?>
+                      </h3>
+                    </div>
+                    
+                    <div class="timeline-item col-sm-15">
+                      <h3 class="timeline-header col-sm-10"><a>Penghasilan Bulanan  : </a> <?php $pnghsilan_bulanan_ibu = $this->db->get('tb02_ortu')->result();
+                      foreach($pnghsilan_bulanan_ibu as $row)?> <?php echo $row->pnghsilan_bulanan_ibu; ?>
+                      </h3>
+                    </div>
+
+                  </li>
+                  <!-- END timeline item -->
+                  <li>
+                    <i class="fa fa-clock-o bg-gray"></i>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="persyaratan">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputName" placeholder="Name"> 
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+
+                    <div class="col-sm-10">
+                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-danger">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+          </div>
+          <!-- /.nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+    </section>
+
+<!-- Modal data update siswa -->
+<div class="modal modal-info fade" id="modal-info">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Update Data Peserta Didik</h4> <!-- Judul Update siswa -->
+              </div>
+              <form role="form" method="post" action="<?php echo base_url('admin/Siswa/update'); ?>" enctype="multipart/form-data">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="nm_siswa">Nama Lengkap</label> <!-- Nama siswa -->
+                  <input type="teks" name="nm_siswa" class="form-control" id="nm_siswa"  value="<?php echo $ssw['nm_siswa']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="kmptnsi_keahlian">Jurusan</label>
+                  <select class="form-control" name="kmptnsi_keahlian" value="<?php echo $ssw['kmptnsi_keahlian']; ?>">
+                      <?php $kmptnsi_keahlian = $this->db->get('tb05_prodi')->result(); foreach($kmptnsi_keahlian as $row) {?>
+							      <option value="<?php echo $row->kd_keahlian; ?>"> <?php echo $row->kmptnsi_keahlian; ?> </option>
+                    <?php }?>
+                    </select>
+                </div>
+                <div class="form-group">
+                  <label for="nis">NIS</label>
+                  <input type="teks" name="nis" class="form-control" id="nis"  value="<?php echo $ssw['nis']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="nisn">NISN</label>
+                  <input type="teks" name="nisn" class="form-control" id="nisn"  value="<?php echo $ssw['nisn']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="kls">Diterima Saat kelas</label>
+                  <select class="form-control" name="kls" value="<?php echo $ssw['kls']; ?>">                       
+                        <option value="10"> X (Sepuluh) </option>
+                        <option value="11"> XI (Sebelas) </option>
+                        <option value="12"> XII (Dua Belas) </option>
+                      </select>
+                </div>              
+                <div class="form-group">
+                  <label for="jnis_klamin">Jenis Kelamin</label>
+                  <select class="form-control" name="jnis_klamin" value="<?php echo $ssw['jnis_klamin']; ?>">
+                        <option value="L"> Laki-Laki </option>
+                        <option value="P"> Perempuan </option>
+                      </select>
+                </div>
+                <div class="form-group">
+                  <label for="tmp_lahir col-sm-10">Tempat Lahir</label>
+                  <input type="tmp_lahir" name="tmp_lahir" class="form-control" id="tmp_lahir"  value="<?php echo $ssw['tmp_lahir']; ?>">
+                  <label for="tgl_lahir col-sm-5">Tanggal Lahir</label>
+                  <input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir"  value="<?php echo $ssw['tgl_lahir']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="nik">NIK</label>
+                  <input type="teks" name="nik" class="form-control" id="nik"  value="<?php echo $ssw['nik']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="no_kk">NO KK</label>
+                  <input type="teks" name="no_kk" class="form-control" id="no_kk"  value="<?php echo $ssw['no_kk']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="alamat">Alamat</label>
+                  <input type="teks" name="alamat" class="form-control" id="alamat"  value="<?php echo $ssw['alamat']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="hobi">Hobi</label>
+                  <input type="teks" name="hobi" class="form-control" id="hobi"  value="<?php echo $ssw['hobi']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="cita_cita">Cita - Cita</label>
+                  <input type="teks" name="cita_cita" class="form-control" id="cita_cita"  value="<?php echo $ssw['cita_cita']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="asl_sekolah">Asal Sekolah</label>
+                  <input type="teks" name="asl_sekolah" class="form-control" id="asl_sekolah"  value="<?php echo $ssw['asl_sekolah']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="agama">Agama</label>
+                  <input type="teks" name="agama" class="form-control" id="agama"  value="<?php echo $ssw['agama']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="anak_ke">Anak Ke-</label>
+                  <input type="teks" name="anak_ke" class="form-control" id="anak_ke"  value="<?php echo $ssw['anak_ke']; ?>">
+                </div>
+                <div class="form-group">
+                  <label for="penerima_kip_dtks">Penerima KIP/DTKS</label>
+                  <input type="teks" name="penerima_kip_dtks" class="form-control" id="penerima_kip_dtks"  value="<?php echo $ssw['penerima_kip_dtks']; ?>">
+                </div>
+
+                <!-- /.update data orang tua peserta didik -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Update Data Orang Tua Peserta Didik</h4> <!-- Judul Update siswa -->
+                    </div>
+
+                    <div class="form-group">
+                      <label for="nm_ayah">Nama Lengkap Ayah</label>
+                      <input type="teks" name="nisn" class="form-control" id="nisn"  value="<?php $nm_ayah = $this->db->get('tb02_ortu')->result();
+                          foreach($nm_ayah as $row)?> <?php echo $row->nm_ayah; ?>">
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <label for="tmp_lahir col-lg-6">Tempat Lahir</label>
+                          <input type="tmp_lahir" name="tmp_lahir" class="form-control" id="tmp_lahir"  value="<?php echo $ssw['tmp_lahir']; ?>">
+                      </div>
+                        
+                        <div class="input-group">
+                          <label for="tgl_lahir col-lg-6">Tanggal Lahir</label>
+                          <input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir"  value="<?php echo $ssw['tgl_lahir']; ?>">
+                        </div>
+
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="tmp_lahir_ayah">Tempat Lahir </label>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="input-group">
+                        <input type="teks" name="nisn" class="form-control" id="tmp_lahir_ayah"  value="<?php $tmp_lahir_ayah = $this->db->get('tb02_ortu')->result();
+                          foreach($tmp_lahir_ayah as $row)?> <?php echo $row->tmp_lahir_ayah; ?>">
+                      </div>
+                  <!-- /input-group -->
+                      </div>
+                <!-- /.col-lg-6 -->
+                <label for="tgl_lahir_ayah">Tanggal Lahir </label>
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <input type="date" name="tgl_lahir_ayah" class="form-control" id="tgl_lahir_ayah"  value="<?php $tgl_lahir_ayah = $this->db->get('tb02_ortu')->result();
+                          foreach($tgl_lahir_ayah as $row)?> <?php echo $row->tgl_lahir_ayah; ?>">
+                  </div>
+                </div>
+                
+                <!-- /.col-lg-6 -->
+              </div>
+                    </div>
+
+
+                <!-- /.update data persyaratan peserta didik -->
+
+                <div class="form-group">
+                  <label for="exampleInputFile">Photo</label>
+                  <input type="file" id="exampleInputFile">
+                </div>
+                <div class="checkbox">
+                </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+              </form>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+  
+ </div>
